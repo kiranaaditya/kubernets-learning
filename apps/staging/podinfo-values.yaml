@@ -12,7 +12,7 @@ spec:
   values:
     ingress:
       hosts:
-        - host: portal.test-dataplatform.online
+        - host: podinfo.test-dataplatform.online
           paths:
             - path: /
               pathType: ImplementationSpecific
