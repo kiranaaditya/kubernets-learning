@@ -32,8 +32,19 @@ spec:
         namespace: ingress-nginx
       interval: 12h
   values:
-    controller:
-      service:
-        type: "NodePort"
+    # controller:
+    #   service:
+    #     type: "NodePort"
     admissionWebhooks:
       enabled: false
+    controller:
+      config:
+        use-proxy-protocol: "true"
+      service:
+        annotations: 
+          load-balancer.hetzner.cloud/hostname: www.test-dataplatform.online
+          load-balancer.hetzner.cloud/http-redirect-https: "true"
+          load-balancer.hetzner.cloud/location: fsn1
+          load-balancer.hetzner.cloud/name: test-dataplatform.online
+          # load-balancer.hetzner.cloud/uses-proxyprotocol: "true"
+          load-balancer.hetzner.cloud/use-private-ip: "true"
