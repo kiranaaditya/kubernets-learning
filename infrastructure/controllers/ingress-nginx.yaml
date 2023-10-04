@@ -39,7 +39,7 @@ spec:
       enabled: false
     controller:
       config:
-        use-proxy-protocol: "true"
+        # use-proxy-protocol: "true"
       service:
         annotations: 
           load-balancer.hetzner.cloud/hostname: www.test-dataplatform.online
