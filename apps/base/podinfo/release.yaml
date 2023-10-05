@@ -25,3 +25,6 @@ spec:
     ingress:
       enabled: true
       className: nginx
+    tls:
+      enabled: true 
+      secretName: podinfo-tls
