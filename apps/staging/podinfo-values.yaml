@@ -11,6 +11,7 @@ spec:
     enable: false
   values:
     ingress:
+      cert-manager.io/cluster-issuer: letsencrypt-staging-issuer
       hosts:
         - host: podinfo.test-dataplatform.online
           paths:
